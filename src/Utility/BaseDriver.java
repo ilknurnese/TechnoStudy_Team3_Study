@@ -7,14 +7,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
-import java.util.Objects;
 
 public class BaseDriver {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
     @BeforeClass
-    public void initialOperations(){
+    public void InitialOperations(){
+
 
         driver=new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -25,9 +25,9 @@ public class BaseDriver {
     }
 
     @AfterClass
-    public void finishingOperations() {
+    public void FinishingOperations() {
 
-        Tools.sleep(3);
+        Tools.Sleep(3);
         driver.quit();
 
 

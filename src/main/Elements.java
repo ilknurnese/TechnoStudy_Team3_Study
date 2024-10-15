@@ -23,5 +23,9 @@ public class Elements {
     @FindBy(css="[class='t978__link-inner t978__link-inner_left']")
     public List<WebElement> coursesList;
 
+    @FindBy(xpath = "(//a[@data-buttonfieldset='button2'])[1]")
+    public WebElement campusLogin;
 
+    @FindBy(css = "[class='mdc-button__label']")
+    public WebElement loginButton;
 }

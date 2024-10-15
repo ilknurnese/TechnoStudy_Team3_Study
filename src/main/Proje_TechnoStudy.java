@@ -1,6 +1,7 @@
 package main;
 
 import Utility.BaseDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,8 +20,13 @@ public class Proje_TechnoStudy extends BaseDriver {
             Assert.assertTrue(elements.coursesList.get(i).isEnabled(),"Kurs bulunamadı");
         }
 
+    }
 
-
+    @Test
+    public void Test_US_2(){
+        Elements elements=new Elements();
+        wait.until(ExpectedConditions.elementToBeClickable(elements.campusLogin)).click();
+        Assert.assertTrue(elements.loginButton.isDisplayed());
     }
 
 }
