@@ -1,7 +1,6 @@
 package main;
 
 import Utility.BaseDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,8 +16,12 @@ public class Elements {
 
     @FindBy(xpath = "(//*[text()='Kurslar'])[1]")
     public WebElement courses;
-
+    
     @FindBy(xpath="//*[text()='SDET-Yazılım Test Uzmanı']")
      public WebElement sdet;
-    
+
+    @FindBy(css="[class='t978__link-inner t978__link-inner_left']")
+    public List<WebElement> coursesList;
+
+
 }
